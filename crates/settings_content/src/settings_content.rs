@@ -204,6 +204,7 @@ pub struct SettingsContent {
 
     pub language_models: Option<AllLanguageModelSettingsContent>,
 
+    pub symbol_browser: Option<SymbolBrowserSettingsContent>,
     pub outline_panel: Option<OutlinePanelSettingsContent>,
 
     pub project_panel: Option<ProjectPanelSettingsContent>,
@@ -982,6 +983,14 @@ pub enum HourFormat {
     #[default]
     Hour12,
     Hour24,
+}
+
+#[derive(Clone, Default, Serialize, Deserialize, JsonSchema, MergeFrom, Debug, PartialEq)]
+pub struct SymbolBrowserSettingsContent {
+    pub button: Option<bool>,
+    #[serde(serialize_with = "crate::serialize_optional_f32_with_two_decimal_places")]
+    pub default_width: Option<f32>,
+    pub dock: Option<DockSide>,
 }
 
 #[with_fallible_options]

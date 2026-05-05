@@ -17227,6 +17227,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "symbol_browser"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "editor",
+ "gpui",
+ "log",
+ "lsp",
+ "project",
+ "settings",
+ "ui",
+ "util",
+ "workspace",
+ "zed_actions",
+]
+
+[[package]]
 name = "symphonia"
 version = "0.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -22507,6 +22524,7 @@ dependencies = [
  "snippet_provider",
  "snippets_ui",
  "svg_preview",
+ "symbol_browser",
  "sysinfo 0.37.2",
  "system_specs",
  "tab_switcher",

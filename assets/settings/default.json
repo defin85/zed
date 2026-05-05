@@ -868,6 +868,11 @@
       "on_drop": true,
     },
   },
+  "symbol_browser": {
+    "button": true,
+    "default_width": 300,
+    "dock": "right"
+  },
   "outline_panel": {
     // Whether to show the outline panel button in the status bar
     "button": true,
